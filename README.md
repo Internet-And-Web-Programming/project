@@ -24,3 +24,9 @@ Key features of the web site will be :
   - Security analysts
 
 Member can have more than one role
+
+# Note :
+At the time of commiting changes, you must always use a branch with your own name, In order to handle commits easier.
+You have to connect this repository with your VS code to make things easier to manage Git commands...
+
+> Incase anyone wants help in connecting repository to your VS code, contact Tanmay or Sudhanshu
