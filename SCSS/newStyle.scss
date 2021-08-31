@@ -1,0 +1,132 @@
+//Dark Theme || Light Theme
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+$Body: (
+  "dark": #000124,
+  "light": #ffffff,
+);
+$Main: (
+  "dark": #37384a,
+  "light": #e5e5e5,
+);
+$i: "dark";
+$Text-FontDark: (
+  "fontFace": "Roboto",
+  "fontColor": #ffffff,
+  "fontAnchor": #ffffff,
+);
+$Text-FontLight: (
+  "fontFace": "Roboto",
+  "fontColor": #000000,
+  "fontAnchor": #1318a0,
+);
+$Text-Font: (
+  "dark": $Text-FontDark,
+  "light": $Text-FontLight,
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: map-get(map-get($Text-Font, $i), "fontFace");
+}
+//body and background...
+body {
+  background: map-get($Body, $i);
+  font-family: map-get(map-get($Text-Font, $i), "fontFace");
+  color: map-get(map-get($Text-Font, $i), "fontColor");
+  overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
+}
+.topRight {
+  position: absolute;
+  z-index: -1;
+  transform: translateX(-50%) translateY(-50%);
+  top: 5%;
+  left: 95%;
+  transition: all 0.5s linear;
+}
+.bottomLeft {
+  position: absolute;
+  z-index: -1;
+  transform: translateX(-50%) translateY(-50%);
+  top: 95%;
+  left: 5%;
+  transition: all 0.5s linear;
+}
+
+//Main login form
+.Main {
+  background: map-get($Main, $i);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 550px;
+  transform: translateX(-50%) translateY(-50%);
+  border-radius: 5.74% / 5.74%; //Horizontal radius vertical radius.
+  .Heading {
+    padding-top: 24.1%;
+    text-align: center;
+    font-size: 36px;
+  }
+  table {
+    padding-top: 8.1%;
+    padding-bottom: 4.3%;
+
+    text-align: center;
+    td {
+      padding-left: 5px;
+      .fa {
+        font-weight: 400;
+        font-size: 28px;
+        color: map-get(map-get($Text-Font, $i), "fontColor");
+      }
+      input {
+        font-size: 25px;
+        border: none;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        outline: none;
+        transition-duration: 250ms;
+        &:focus {
+          box-shadow: 2px 2px 3px;
+          font-size: 28px;
+          font-weight: bold;
+        }
+      }
+      .Btn {
+        padding-left: 17px;
+        padding-right: 17px;
+        border-radius: 99px;
+        padding-top: 10px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+
+        background: #1318a0; //since this is not changing in any theme
+        transition: all 0.5 ease-in;
+        color: #e5e5e5;
+        &:hover {
+          padding-left: 21px;
+          padding-right: 21px;
+          font-weight: 900;
+          // box-shadow: 2px 2px 5px black;
+        }
+      }
+    }
+  }
+  .bottomText {
+    padding-bottom: 19.4%;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-weight: bold;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: map-get(map-get($Text-Font, $i), "fontAnchor");
+      opacity: 75%;
+    }
+  }
+}
