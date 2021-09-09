@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: "Roboto";
+}
+
+body {
+  background: #ffffff;
+  font-family: "Roboto";
+  color: #000000;
+  overflow: hidden;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.topRight {
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  top: 5%;
+  left: 95%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.bottomLeft {
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  top: 95%;
+  left: 5%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.Main {
+  background: #e5e5e5;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 550px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  border-radius: 5.74% / 5.74%;
+}
+
+.Main .Heading {
+  padding-top: 24.1%;
+  text-align: center;
+  font-size: 36px;
+}
+
+.Main table {
+  padding-top: 8.1%;
+  padding-bottom: 4.3%;
+  text-align: center;
+}
+
+.Main table td {
+  padding-left: 5px;
+}
+
+.Main table td .fa {
+  font-weight: 400;
+  font-size: 28px;
+  color: #000000;
+}
+
+.Main table td input {
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+}
+
+.Main table td input:focus {
+  -webkit-box-shadow: 2px 2px 3px;
+          box-shadow: 2px 2px 3px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.Main table td .Btn {
+  padding-left: 17px;
+  padding-right: 17px;
+  border-radius: 99px;
+  padding-top: 10px;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  background: #1318a0;
+  -webkit-transition: all 0.5 ease-in;
+  transition: all 0.5 ease-in;
+  color: #e5e5e5;
+}
+
+.Main table td .Btn:hover {
+  padding-left: 21px;
+  padding-right: 21px;
+  font-weight: 900;
+}
+
+.Main .bottomText {
+  padding-bottom: 19.4%;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-weight: bold;
+}
+
+.Main .bottomText a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1318a0;
+  opacity: 75%;
+}
+/*# sourceMappingURL=newStyle.css.map */
