@@ -1,0 +1,149 @@
+@import "./Defaults.css";
+
+:root{
+    --bodybg : var(--bodybglight);
+    --formbg : var(--formbglight);
+    --textcol : var(--textlight);
+}
+
+body {
+    background-color: var(--bodybg);
+    overflow: hidden;
+    height: 767px;
+    width: 978px;
+}
+
+table {
+    position: absolute;
+    border: none;
+    color: black;
+    border-radius: 50px;
+    left: 515px;
+    right: auto;
+    top: 50px;
+    width: 570px;
+    background-color: var(--formbg);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#cornerimg1{
+    position:absolute;
+    left:-100px;
+    bottom:-100px;
+    animation-name:rot1;
+    animation-duration:4s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+
+@keyframes rot1{
+    0%   {transform:rotate(360deg);}
+}
+
+#cornerimg2 {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    animation-name: rot2;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rot2 {
+    0% {transform: rotate(360deg);}
+}
+
+#mbuttond {
+    position: absolute;
+    visibility : visible;
+    top : 10px;
+    left : 10px;
+    width : 50px;
+    border : none;
+    background-color: var(--formbg);
+    cursor :pointer;
+}
+
+#mbuttonl {
+    position: absolute;
+    visibility: hidden;
+    left: 10px;
+    top: 10px;
+    width: 50px;
+    border: none;
+    background-color: var(--formbg);
+    cursor: pointer;
+}
+
+#pwbutton1,#pwbutton2 {
+    margin-left:-41px;
+    visibility:hidden;
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+#pwvisbutton1,#pwvisbutton2 {
+    position:relative;
+    top:5px;
+}
+
+#sbutton {
+    height: 65px;
+    color:white;
+    font: 15px arial;
+    background-color: #1318A0;
+    border-radius: 25px;
+}
+
+.mform {
+    text-align: center;
+    padding: 50px;
+}
+
+.mtag {
+    background:none;
+    opacity:1;
+    text-align: center;
+    border-radius: 25px;
+    margin-top:50px;
+}
+
+.mform span{
+    font: 18px arial;
+}
+
+.mform input[type=text],[type=password] {
+    width: 350px;
+    height: 50px;
+    font-size:18px;
+    padding:20px;
+    opacity: 0.5;
+    border-radius:15px;
+    background-color: #FFFFFF;
+    outline: none;
+    border: none;
+}
+
+.mform input[type=submit] {
+    width: 150px;
+    border: hidden;
+    opacity:0.8;
+    transition:width 1s;
+}
+
+.mform input[type=submit]:hover {
+    opacity: 1;
+    cursor:pointer;
+    width:250px;
+}
+
+.mform input[type=text]:focus,[type=password]:focus {
+    opacity: 1;
+}
+
+.mform input[type=text]:hover,[type=password]:hover {
+    opacity:1;
+    box-shadow: 0 3px 4px grey;
+}
