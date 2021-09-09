@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>SignUp page</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/supage.css" />
+</head>
+<body>
+    <script src="../JS/suppage.js"></script>
+    <table id="maintable">
+        <tr>
+            <td><div class="mtag"><font size="6" face="arial"><b>Sign Up</b></font></div></td>
+        </tr>
+        <tr>
+            <td id="mformtd">
+                <div class="mform">
+                    <form>
+                        <label for="fanme"></label>
+                        <input type="text" id="fname" name="fname" autocomplete="off" placeholder="Full Name" /><br /><br />
+                        <label for="uname"></label>
+                        <input type="text" id="uname" name="uname" autocomplete="off" placeholder="Username" /><br /><br />
+                        <label for="mail"></label>
+                        <input type="text" id="mail" name="mail" autocomplete="off" placeholder="Email" /><br /><br />
+                        <label for="pw"></label>
+                        <input type="password" onclick="pwbuttonvis1()" id="pw" name="pw" autocomplete="off" placeholder="Password" />
+                        <button type="button" onclick="pwvisibility()" id="pwbutton1"><img src="../Data/pwvisibilityico.png" width="25" height="25" id="pwvisbutton1"/></button><br /><br />
+                        <label for="cpw"></label>
+                        <input type="password" onclick="pwbuttonvis2()" id="cpw" name="cpw" autocomplete="off" placeholder="Confirm Password" />
+                        <button type="button" onclick="pwvisibility()" id="pwbutton2"><img src="../Data/pwvisibilityico.png" width="25" height="25" id="pwvisbutton2" /></button><br /><br /><br />
+                        <span id="accmessage">Already have an account? Log-In <a href="loginpage.html">here</a>.</span><br /><br />
+                        <input type="submit" id="sbutton" value="Sign Up" />
+                    </form>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <span id="cornerimg1"><img src="../Data/corner.png" width="300" height="300" /></span>
+    <span id="cornerimg2"><img src="../Data/corner.png" width="300" height="300" /></span>
+    <button type="button" onclick="dbutton()" id="mbuttond">Dark</button>
+    <button type="button" onclick="lbutton()" id="mbuttonl">Light</button>
+</body>
+</html>
