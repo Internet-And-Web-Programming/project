@@ -1,7 +1,7 @@
 # Project Idea
 ## Basic Idea is to develop an online messaging website.
 Key features of the web site will be :
-- Instant messsaging
+- Instant messaging
 - Group chatting
 - Instant File sharing
 - Profile creation for every user.
