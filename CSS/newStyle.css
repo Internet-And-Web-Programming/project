@@ -7,9 +7,9 @@
 }
 
 body {
-  background: #ffffff;
+  background: #000124;
   font-family: "Roboto";
-  color: #000000;
+  color: #ffffff;
   overflow: hidden;
   height: 100vh;
   overflow: hidden;
@@ -38,7 +38,7 @@ body {
 }
 
 .Main {
-  background: #e5e5e5;
+  background: #37384a;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -67,7 +67,7 @@ body {
 .Main table td .fa {
   font-weight: 400;
   font-size: 28px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .Main table td input {
@@ -118,7 +118,7 @@ body {
 .Main .bottomText a {
   text-decoration: none;
   font-weight: bold;
-  color: #1318a0;
+  color: #ffffff;
   opacity: 75%;
 }
 /*# sourceMappingURL=newStyle.css.map */
