@@ -10,3 +10,33 @@ $darkBlue: rgb(59, 59, 253);
   padding: 0;
   margin: 0;
 }
+$Body: (
+  "dark": #000124,
+  "light": #ffffff,
+);
+$Main: (
+  "dark": #37384a,
+  "light": #e5e5e5,
+);
+$i: "dark";
+$Text-FontDark: (
+  "fontFace": "Roboto",
+  "fontColor": #ffffff,
+  "fontAnchor": #ffffff,
+);
+$Text-FontLight: (
+  "fontFace": "Roboto",
+  "fontColor": #000000,
+  "fontAnchor": #1318a0,
+);
+$Text-Font: (
+  "dark": $Text-FontDark,
+  "light": $Text-FontLight,
+);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: map-get(map-get($Text-Font, $i), "fontFace");
+}
