@@ -3,20 +3,18 @@
   margin: 0;
 }
 
-<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
   font-weight: 400;
   font-family: "Roboto";
-=======
+}
 :root {
-    --bodybglight: #ffffff;
-    --formbglight: #E5E5E5;
-    --bodybgdark: #000124;
-    --formbgdark: #37384A;
-    --textdark: #ffffff;
-    --textlight: #000000;
->>>>>>> a1e4a30d4e9657718346f0b1e2760eab390a8cca
+  --bodybglight: #ffffff;
+  --formbglight: #e5e5e5;
+  --bodybgdark: #000124;
+  --formbgdark: #37384a;
+  --textdark: #ffffff;
+  --textlight: #000000;
 }
 /*# sourceMappingURL=defaults.css.map */
