@@ -1,7 +1,7 @@
 //Dark Theme || Light Theme
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import "./Defaults.scss"; //body and background...
-
+$i: "dark";
 body {
   background: map-get($Body, $i);
   font-family: map-get(map-get($Text-Font, $i), "fontFace");
