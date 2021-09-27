@@ -1,0 +1,99 @@
+@import "./Defaults.css";
+
+body{
+    margin:0;
+    background-color: var(--formbgdark);
+    overflow:hidden;
+}
+
+.mainheader{
+    height:50px;
+    display:block;
+    background-color:var(--bodybgdark);
+}
+
+.mainwrapper{
+    display:grid;
+    grid-template-columns: 30% 70%;
+    column-gap:2px;
+}
+
+.contact_list{
+    display: grid;
+    height:743.6px;
+    background-color:var(--chatbodydark);
+    grid-template-rows:95% 5%;
+}
+
+.contact_list ul{
+    list-style-type:none;
+}
+
+.contact_list ul li{
+    display:grid;
+    grid-template-columns:20% 80%;
+    border-bottom:2px solid var(--formbgdark);
+    margin-left:-40px;
+}
+
+.contact_list ul li span{
+    font: 20px arial;
+    color:white;
+    padding-top:5px;
+}
+
+.contact_list_footer{
+    display:grid;
+    grid-template-columns:70% 30%;
+    padding-top:5px;
+    border-top:2px solid var(--formbgdark);
+}
+
+.contact_list_footer label{
+    padding-left:30px;
+}
+
+.chat_window{
+    display:grid;
+    height:743.6px;
+    grid-template-rows:10% 80% 10%;
+}
+
+.chat_header{
+    padding-left:10px;
+    background-color:var(--chatbodydark);
+    color:white;
+}
+
+.chat_header span{
+   font: 20px arial;
+   padding-left:10px;
+}
+
+.chat_footer{
+    display:grid;
+    background-color:var(--chatbodydark);
+    grid-template-columns: 10% 10% 70% 10%;
+}
+
+#contact_ico_cl{
+    padding-bottom:10px;
+    padding-left:10px;
+}
+
+#contact_ico_cw{
+    padding-top:20px;
+    margin-bottom:-10px;
+}
+
+#contact_search {
+    width: 300px;
+    height: 30px;
+    border-radius: 25px;
+    padding: 5px;
+    outline: none;
+}
+
+#settings_ico{
+    padding-left:20px;
+}

@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/CSS/newStyle.css" />
-    <title>Log In</title>
+    <title>Sign-In</title>
   </head>
   <body>
     <header class="Head">
@@ -81,9 +81,24 @@
         <img src="../Data/light_dark.svg" alt="theme" height="40px" />
       </a>
       <form action="">
-        <div class="Heading">Log In</div>
+        <div class="Heading">Sign In</div>
         <center>
           <table cellspacing="10px">
+            <tr>
+              <div class="content">
+                <td><i class="fa fa-user" aria-hidden="false"></i></td>
+                <td>
+                  <input
+                    type="text"
+                    name="Username"
+                    id="username"
+                    placeholder="Your Name"
+                    autocomplete="off"
+                    required
+                  />
+                </td>
+              </div>
+            </tr>
             <tr>
               <div class="content">
                 <td><i class="fa fa-user-circle" aria-hidden="false"></i></td>
@@ -92,13 +107,14 @@
                     type="text"
                     name="Username"
                     id="username"
-                    placeholder="Username"
+                    placeholder="Set your Username"
                     autocomplete="off"
                     required
                   />
                 </td>
               </div>
             </tr>
+
             <tr>
               <div class="content">
                 <td><i class="fa fa-lock" aria-hidden="true"></i></td>
@@ -107,16 +123,49 @@
                     type="password"
                     name="Password"
                     id="Password"
-                    placeholder="Password"
+                    placeholder="Set Password"
                     autocomplete="off"
                     required
                   />
                 </td>
               </div>
             </tr>
+
+            <tr>
+              <div class="content">
+                <td><i class="fa fa-lock" aria-hidden="true"></i></td>
+                <td>
+                  <input
+                    type="password"
+                    name="Password"
+                    id="Password"
+                    placeholder="Confirm Password"
+                    autocomplete="off"
+                    required
+                  />
+                </td>
+              </div>
+            </tr>
+
+            <tr>
+              <div class="content">
+                <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                <td>
+                  <input
+                    type="Email"
+                    name="Email"
+                    id="Email"
+                    placeholder="Your Email Address"
+                    autocomplete="off"
+                    required
+                  />
+                </td>
+              </div>
+            </tr>
+
             <tr>
               <td colspan="2">
-                <input type="submit" value="Login ->" class="Btn" />
+                <input type="submit" value="Signin ->" class="Btn" />
               </td>
             </tr>
           </table>
@@ -124,8 +173,8 @@
       </form>
       <center>
         <div class="bottomText">
-          Don't have an account? Create an account
-          <a href="SignUpPageNew.html">here</a>
+          Already have an account? Log in
+          <a href="NewLogin.html">here</a>
         </div>
       </center>
     </div>
