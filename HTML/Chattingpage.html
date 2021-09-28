@@ -1,98 +1,81 @@
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title>Main Page</title>
-    <!-- <link rel="stylesheet" type="text/css" href="/CSS/cpage.css" /> -->
-    <link rel="stylesheet" href="/CSS/MainPage.css" />
+    <title>ChattingPage</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/cpage.css" />
   </head>
   <body>
-    <section id="main">
-      <article>
-        <section>
-          <header>
-            <table>
-              <tr>
-                <td>
-                  <div class="profilePic">
-                    <img src="/Data/corner.png" alt="" height="40px" />
-                  </div>
-                </td>
-                <td>
-                  <div class="Username">
-                    <p>Sample Jacob</p>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <div class="searchUser">
-                    <form action="#Search">
-                      <i
-                        class="fa fa-search"
-                        aria-hidden="true"
-                        id="SearchLogo"
-                      >
-                        <input type="text" name="search" placeholder="Search" />
-                      </i>
-                    </form>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </header>
-          <main>
-            <div class="Connections">
-              <table>
-                <div class="Card" id="SampleUserName1">
-                  <tr>
-                    <td>
-                      <div class="profilePic">
-                        <img src="/Data/corner.png" alt="" height="40px" />
-                      </div>
-                    </td>
-                    <td>
-                      <div class="Username">
-                        <p>Sample Jacob</p>
-                      </div>
-                    </td>
-                  </tr>
-                </div>
-              </table>
-            </div>
-          </main>
-          <aside>
-            <section>
-              <header>
-                <div class="profilePick">
-                  <img src="" alt="" id="profile" />
-                </div>
-                <div class="ContactName">
-                  <p></p>
-                </div>
-              </header>
-              <main>
-                <div class="messageWindow"></div>
-              </main>
-              <footer>
-                <div class="messageInput">
-                  <form action="">
-                    <input type="text" name="message" placeholder="Message" />
-                    <button id="reply" type="Submit">
-                      <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                    </button>
-                  </form>
-                </div>
-              </footer>
-            </section>
-          </aside>
-        </section>
-      </article>
-    </section>
+    <div class="mainheader">
+      <img
+        src="../Data/logomainlight.png"
+        height="50"
+        width="60"
+        id="logo_main"
+      />
+    </div>
+    <div class="mainwrapper">
+      <div class="contact_list">
+        <div class="contact_list_mainlist">
+          <ul>
+            <li>
+              <img
+                src="../Data/contactico.png"
+                height="35"
+                width="35"
+                id="contact_ico_cl"
+              />
+              <span>Contact 1</span>
+            </li>
+          </ul>
+        </div>
+        <div class="contact_list_footer">
+          <form>
+            <label for="contact_search"></label>
+            <input
+              type="text"
+              id="contact_search"
+              name="contact_search"
+              placeholder="Search"
+            />
+          </form>
+          <img
+            src="../Data/settingsico.png"
+            height="25"
+            width="25"
+            id="settings_ico"
+          />
+        </div>
+      </div>
+      <div class="chat_window">
+        <div class="chat_header">
+          <img
+            src="../Data/contactico.png"
+            height="35"
+            width="35"
+            id="contact_ico_cw"
+          />
+          <span>Contact 1</span>
+        </div>
+        <div class="chat_body"></div>
+        <div class="chat_footer">
+          <img src="../Data/buffer.png" height="35" width="35" id="emoji_ico" />
+          <img
+            src="../Data/buffer.png"
+            height="35"
+            width="35"
+            id="attachment_ico"
+          />
+          <form>
+            <label for="message_type"></label>
+            <input
+              type="text"
+              name="message_type"
+              id="message_type"
+              placeholder="Type a message..."
+            />
+          </form>
+          <img src="../Data/buffer.png" height="35" width="35" id="mic_ico" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
