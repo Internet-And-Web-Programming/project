@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 $i: "dark";
+$j: "light";
 * {
   padding: 0px;
   margin: 0px;
@@ -25,6 +26,7 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   background-color: map-get($Body, $i);
+  // color: map-get(map-get($Text-Font, $i), "fontColor");
   height: 100vh;
   width: 100vw;
   section#main {
@@ -32,13 +34,14 @@ body {
     font-family: map-get(map-get($Text-Font, $i), "fontFace");
     margin: 15px;
     border-radius: 5px;
-    background-color: map-get($Main, $i) !important;
   }
   section#main > article {
     // This is going to be the username panel
     position: relative;
+    float: left;
     padding: 10px;
     width: 37%;
+    background-color: map-get($Main, $i) !important;
     border: 2px solid map-get(map-get($Text-Font, $i), "FontColor");
     border-radius: 5px 0px 0px 5px;
     section {
@@ -67,42 +70,92 @@ body {
         height: max-content;
         .Connections {
           width: 100%;
-          min-height: 75vh;
+          min-height: 78vh;
           overflow-y: scroll;
           position: relative;
           height: 100%;
         }
       }
-      aside {
+    }
+  }
+  section#main > aside {
+    float: left;
+    width: 59%;
+    background-color: map-get($Main, $i) !important;
+    position: relative;
+    min-height: 95vh;
+    border: 2px solid map-get(map-get($Text-Font, $i), "FontColor");
+    border-radius: 0px 5px 5px 0px;
+    right: 0px;
+    section {
+      header {
+        padding: 10px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.527);
+        .ActiveUserName {
+          display: inline-block;
+          font-size: 2em;
+          font-weight: 900;
+        }
+      }
+      main {
+        position: relative;
         width: 100%;
+        .messageWindow {
+          width: 100%;
+          height: 84vh;
+          background-image: linear-gradient(
+            135deg,
+            map-get($Main, $i),
+            map-get($Body, $i)
+          );
+        }
+      }
+      footer {
+        padding: 5px;
+        input {
+          background-color: map-get($Body, $i) !important;
+          border: none;
+          font-size: 1.5em;
+          width: 89%;
+        }
+        button {
+          padding-left: 13px;
+          font-size: 1.5em;
+          background-color: map-get($Main, $i);
+          border: none;
+        }
       }
     }
   }
-}
-.profilePic {
-  display: inline-block;
-  padding: 2px;
-  border-radius: 50%;
-  border: 1px solid black;
-  background-color: map-get($Body, $i);
-  width: 40px;
-}
-.UserName {
-  display: inline-block;
-  font-size: 2em;
-  font-weight: 900;
-  ::after {
-    display: block;
-    position: absolute;
-    content: "";
-    height: 0px;
-    width: 95%;
-    margin-top: 12px;
-    left: 50%;
-    border-top: 1px solid rgba(0, 0, 0, 0.404);
-    transform: translateX(-50%);
+  .profilePic {
+    display: inline-block;
+    padding: 2px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: map-get($Body, $i);
+    width: 40px;
+  }
+  .UserName {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 900;
+    ::after {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 0px;
+      width: 95%;
+      margin-top: 12px;
+      left: 50%;
+      border-top: 1px solid rgba(0, 0, 0, 0.404);
+      transform: translateX(-50%);
+    }
+  }
+  table {
+    width: 100%;
   }
 }
-table {
-  width: 100%;
+input {
+  outline: none;
+  color: white;
 }

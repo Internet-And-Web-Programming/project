@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <title>Main Page</title>
     <!-- <link rel="stylesheet" type="text/css" href="/CSS/cpage.css" /> -->
     <link rel="stylesheet" href="/CSS/MainPage.css" />
@@ -28,9 +29,15 @@
                     <p>Sample Jacob</p>
                   </div>
                 </td>
+                <td>
+                  <div class="addNew">
+                    <a href="/ChattingPageNew.html">
+                      <i class="fas fa-comment-dots" style= " Color: black; font-size: 30px;"></i>
+                  </div>
+                </td>
               </tr>
               <tr>
-                <td colspan="2">
+                <td colspan="3">
                   <div class="searchUser">
                     <form action="#Search">
                       <i
@@ -66,33 +73,41 @@
               </table>
             </div>
           </main>
-          <aside>
-            <section>
-              <header>
-                <div class="profilePick">
-                  <img src="" alt="" id="profile" />
-                </div>
-                <div class="ContactName">
-                  <p></p>
-                </div>
-              </header>
-              <main>
-                <div class="messageWindow"></div>
-              </main>
-              <footer>
-                <div class="messageInput">
-                  <form action="">
-                    <input type="text" name="message" placeholder="Message" />
-                    <button id="reply" type="Submit">
-                      <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                    </button>
-                  </form>
-                </div>
-              </footer>
-            </section>
-          </aside>
         </section>
       </article>
+      <aside>
+        <section>
+          <header>
+            <table>
+                <tr>
+                  <td>
+                    <div class="profilePic">
+                      <img src="/Data/corner.png" alt="" height="40px" />
+                    </div>
+                  </td>
+                  <td>
+                    <div class="ActiveUsername">
+                      <p>Sample Jacob</p>
+                    </div>
+                  </td>
+                </tr>
+            </table>
+          </header>
+          <main>
+            <div class="messageWindow"></div>
+          </main>
+          <footer>
+            <div class="messageInput">
+              <form action="" autocomplete="off">
+                <input type="text" name="message" placeholder="Message" />
+                <button id="reply" type="Submit">
+                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </footer>
+        </section>
+      </aside>
     </section>
   </body>
 </html>

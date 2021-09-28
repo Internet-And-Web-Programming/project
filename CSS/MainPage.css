@@ -43,13 +43,14 @@ body section#main {
   font-family: "Roboto";
   margin: 15px;
   border-radius: 5px;
-  background-color: #37384a !important;
 }
 
 body section#main > article {
   position: relative;
+  float: left;
   padding: 10px;
   width: 37%;
+  background-color: #37384a !important;
   border: 2px solid;
   border-radius: 5px 0px 0px 5px;
 }
@@ -86,17 +87,64 @@ body section#main > article section main {
 
 body section#main > article section main .Connections {
   width: 100%;
-  min-height: 75vh;
+  min-height: 78vh;
   overflow-y: scroll;
   position: relative;
   height: 100%;
 }
 
-body section#main > article section aside {
+body section#main > aside {
+  float: left;
+  width: 59%;
+  background-color: #37384a !important;
+  position: relative;
+  min-height: 95vh;
+  border: 2px solid;
+  border-radius: 0px 5px 5px 0px;
+  right: 0px;
+}
+
+body section#main > aside section header {
+  padding: 10px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.527);
+}
+
+body section#main > aside section header .ActiveUserName {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+body section#main > aside section main {
+  position: relative;
   width: 100%;
 }
 
-.profilePic {
+body section#main > aside section main .messageWindow {
+  width: 100%;
+  height: 84vh;
+  background-image: linear-gradient(135deg, #37384a, #000124);
+}
+
+body section#main > aside section footer {
+  padding: 5px;
+}
+
+body section#main > aside section footer input {
+  background-color: #000124 !important;
+  border: none;
+  font-size: 1.5em;
+  width: 89%;
+}
+
+body section#main > aside section footer button {
+  padding-left: 13px;
+  font-size: 1.5em;
+  background-color: #37384a;
+  border: none;
+}
+
+body .profilePic {
   display: inline-block;
   padding: 2px;
   border-radius: 50%;
@@ -105,13 +153,13 @@ body section#main > article section aside {
   width: 40px;
 }
 
-.UserName {
+body .UserName {
   display: inline-block;
   font-size: 2em;
   font-weight: 900;
 }
 
-.UserName ::after {
+body .UserName ::after {
   display: block;
   position: absolute;
   content: "";
@@ -124,7 +172,12 @@ body section#main > article section aside {
           transform: translateX(-50%);
 }
 
-table {
+body table {
   width: 100%;
+}
+
+input {
+  outline: none;
+  color: white;
 }
 /*# sourceMappingURL=MainPage.css.map */
