@@ -9,4 +9,13 @@
   font-weight: 400;
   font-family: "Roboto";
 }
-/*# sourceMappingURL=Defaults.css.map */
+:root {
+    --bodybglight: #ffffff;
+    --formbglight: #e5e5e5;
+    --bodybgdark: #000124;
+    --formbgdark: #37384a;
+    --textdark: #ffffff;
+    --chatbodydark: #4D4E61;
+    --textlight: #000000;
+}
+/*# sourceMappingURL=defaults.css.map */
