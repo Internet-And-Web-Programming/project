@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-family: "Roboto";
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 50%;
+}
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: #000124;
+  height: 100vh;
+  width: 100vw;
+}
+
+body section#main {
+  font-family: "Roboto";
+  margin: 15px;
+  border-radius: 5px;
+  background-color: #37384a !important;
+}
+
+body section#main > article {
+  position: relative;
+  padding: 10px;
+  width: 37%;
+  border: 2px solid;
+  border-radius: 5px 0px 0px 5px;
+}
+
+body section#main > article section header {
+  top: 0%;
+  padding: 2px;
+  width: 100%;
+  border-bottom: 2px solid black;
+}
+
+body section#main > article section header .searchUser {
+  padding-top: 20px;
+  font-size: 24px;
+  margin-bottom: 3px;
+}
+
+body section#main > article section header .searchUser input {
+  background: #000124 !important;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+  width: 85%;
+}
+
+body section#main > article section main {
+  padding: 10px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+body section#main > article section main .Connections {
+  width: 100%;
+  min-height: 75vh;
+  overflow-y: scroll;
+  position: relative;
+  height: 100%;
+}
+
+body section#main > article section aside {
+  width: 100%;
+}
+
+.profilePic {
+  display: inline-block;
+  padding: 2px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #000124;
+  width: 40px;
+}
+
+.UserName {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.UserName ::after {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 0px;
+  width: 95%;
+  margin-top: 12px;
+  left: 50%;
+  border-top: 1px solid rgba(0, 0, 0, 0.404);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+table {
+  width: 100%;
+}
+/*# sourceMappingURL=MainPage.css.map */
