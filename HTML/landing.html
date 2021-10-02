@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>_ > | Welcome!</title>
     <link rel="stylesheet" type="text/css" href="/CSS/landing.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/landing.css" />
     <link rel="icon" href="logo.png" type="image/icon type" />
     <link
       rel="stylesheet"
@@ -24,10 +25,35 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body style="scroll-behavior: smooth">
     <section class="header">
-      <nav>
-        <a href="landing.html"><img src="" /></a>
+      <nav name="top">
+        <div class="logo" style="position: absolute; margin: 20px">
+          <svg
+            id="logo"
+            width="125"
+            height="105.3"
+            viewBox="0 0 1300 1264"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M45.6759 237.169C48.9787 237.786 52.7131 237.906 58.2519 237.929V291V303.105L66.7943 294.529L123.167 237.934H285H285.387C303.915 237.934 318.332 237.935 329.557 236.425C341.004 234.886 349.878 231.696 356.82 224.754C363.762 217.813 366.952 208.939 368.491 197.492C370 186.266 370 171.85 370 153.321V152.934V89.9999V89.613C370 71.0846 370 56.668 368.491 45.4429C366.952 33.9959 363.762 25.1219 356.82 18.1802C349.878 11.2385 341.004 8.04806 329.557 6.50905C318.332 4.99987 303.915 4.99993 285.387 5L285 5H91.1821L90.7894 5C71.7968 4.99993 57.0259 4.99987 45.5552 6.55784C33.8617 8.14607 24.8272 11.4395 17.846 18.6112C10.8648 25.7828 7.81562 34.9026 6.54257 46.6345C5.29377 58.143 5.69122 72.9085 6.20227 91.8944L6.21284 92.2868L8.70364 184.835L8.72118 185.487C8.93742 193.542 9.06531 198.305 9.94119 202.384C13.751 220.122 27.8409 233.838 45.6759 237.169Z"
+              stroke="#420057"
+              stroke-width="10"
+              stroke-linecap="square"
+            />
+            <path
+              d="M93.7825 176.64C92.8012 176.64 91.9425 176.272 91.2065 175.536C90.4705 174.8 90.1025 173.88 90.1025 172.776V152.904C90.1025 151.187 90.5318 149.837 91.3905 148.856C92.2492 147.875 93.5372 146.893 95.2545 145.912L135.183 119.416L95.2545 93.104C93.6598 92.1227 92.3718 91.1413 91.3905 90.16C90.5318 89.056 90.1025 87.6453 90.1025 85.928V66.056C90.1025 64.952 90.4705 64.0933 91.2065 63.48C91.9425 62.744 92.8012 62.376 93.7825 62.376C94.6412 62.376 95.6838 62.744 96.9105 63.48L163.335 108.56C165.175 109.787 166.524 111.013 167.383 112.24C168.241 113.467 168.671 114.939 168.671 116.656V122.36C168.671 124.077 168.241 125.549 167.383 126.776C166.524 127.88 165.175 129.045 163.335 130.272L96.9105 175.352C95.8065 176.211 94.7638 176.64 93.7825 176.64Z"
+              fill="#720193"
+            />
+            <path
+              d="M190.822 180.248C189.595 180.248 188.491 179.819 187.51 178.96C186.651 178.101 186.222 176.997 186.222 175.648V158.352C186.222 157.003 186.651 155.899 187.51 155.04C188.368 154.059 189.472 153.568 190.822 153.568H300.118C301.467 153.568 302.571 154.059 303.43 155.04C304.288 155.899 304.718 157.003 304.718 158.352V175.648C304.718 176.997 304.288 178.101 303.43 178.96C302.571 179.819 301.467 180.248 300.118 180.248H190.822Z"
+              fill="#720193"
+            />
+          </svg>
+        </div>
+
         <div class="nav-links" id="navLinks">
           <ul>
             <li><a href="landing.html">Home</a></li>
@@ -45,15 +71,15 @@
       </nav>
       <div class="text-box">
         <div class="typewriter-text">
-          <h1>Welcome to _ ></h1>
+          <h1>Welcome to ChatStrive</h1>
         </div>
         <p>Making texting sophisticated!</p>
-        <a href="" class="hero-btn">Keep Scrolling</a>
+        <a href="#about" class="hero-btn">Keep Scrolling</a>
       </div>
     </section>
 
     <section class="about" id="about">
-      <h1>About</h1>
+      <a name="about"><h1>About</h1></a>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos obcaecati
         tempore doloremque in! Voluptatem fugit saepe consequuntur pariatur
@@ -77,32 +103,52 @@
       style="background: #666986"
     >
       <div class="container">
-        <div class="row row-30">
-          <div class="col-md-4 col-xl-5">
-            <div class="pr-xl-4">
-              <a class="brand" href="landing.html"
-                ><img
-                  class="brand-logo-light"
-                  src="logo.png"
-                  width="140"
-                  height="140"
-              /></a>
-              <p>*Text</p>
-              <p class="rights">
-                <span>© </span><span class="copyright-year">2021</span
-                ><span> </span><span>_ ></span><span> - </span
-                ><span>All Rights Reserved.</span>
-              </p>
-            </div>
+        <a class="brand" href="landing.html">
+          <div class="logo" style="margin-top: 30px">
+            <svg
+              id="logo"
+              width="93.75"
+              height="79"
+              viewBox="0 0 375 316"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style="display: flex; padding: 10px"
+            >
+              <path
+                d="M45.6759 237.169C48.9787 237.786 52.7131 237.906 58.2519 237.929V291V303.105L66.7943 294.529L123.167 237.934H285H285.387C303.915 237.934 318.332 237.935 329.557 236.425C341.004 234.886 349.878 231.696 356.82 224.754C363.762 217.813 366.952 208.939 368.491 197.492C370 186.266 370 171.85 370 153.321V152.934V89.9999V89.613C370 71.0846 370 56.668 368.491 45.4429C366.952 33.9959 363.762 25.1219 356.82 18.1802C349.878 11.2385 341.004 8.04806 329.557 6.50905C318.332 4.99987 303.915 4.99993 285.387 5L285 5H91.1821L90.7894 5C71.7968 4.99993 57.0259 4.99987 45.5552 6.55784C33.8617 8.14607 24.8272 11.4395 17.846 18.6112C10.8648 25.7828 7.81562 34.9026 6.54257 46.6345C5.29377 58.143 5.69122 72.9085 6.20227 91.8944L6.21284 92.2868L8.70364 184.835L8.72118 185.487C8.93742 193.542 9.06531 198.305 9.94119 202.384C13.751 220.122 27.8409 233.838 45.6759 237.169Z"
+                stroke="#420057"
+                stroke-width="10"
+                stroke-linecap="square"
+              />
+              <path
+                d="M93.7825 176.64C92.8012 176.64 91.9425 176.272 91.2065 175.536C90.4705 174.8 90.1025 173.88 90.1025 172.776V152.904C90.1025 151.187 90.5318 149.837 91.3905 148.856C92.2492 147.875 93.5372 146.893 95.2545 145.912L135.183 119.416L95.2545 93.104C93.6598 92.1227 92.3718 91.1413 91.3905 90.16C90.5318 89.056 90.1025 87.6453 90.1025 85.928V66.056C90.1025 64.952 90.4705 64.0933 91.2065 63.48C91.9425 62.744 92.8012 62.376 93.7825 62.376C94.6412 62.376 95.6838 62.744 96.9105 63.48L163.335 108.56C165.175 109.787 166.524 111.013 167.383 112.24C168.241 113.467 168.671 114.939 168.671 116.656V122.36C168.671 124.077 168.241 125.549 167.383 126.776C166.524 127.88 165.175 129.045 163.335 130.272L96.9105 175.352C95.8065 176.211 94.7638 176.64 93.7825 176.64Z"
+                fill="#720193"
+              />
+              <path
+                d="M190.822 180.248C189.595 180.248 188.491 179.819 187.51 178.96C186.651 178.101 186.222 176.997 186.222 175.648V158.352C186.222 157.003 186.651 155.899 187.51 155.04C188.368 154.059 189.472 153.568 190.822 153.568H300.118C301.467 153.568 302.571 154.059 303.43 155.04C304.288 155.899 304.718 157.003 304.718 158.352V175.648C304.718 176.997 304.288 178.101 303.43 178.96C302.571 179.819 301.467 180.248 300.118 180.248H190.822Z"
+                fill="#720193"
+              />
+            </svg>
           </div>
-          <div class="col-md-4 col-xl-3">
-            <h5>Links</h5>
-            <ul class="nav-list">
-              <li><a href="landing.html">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact Us</a></li>
-            </ul>
-          </div>
+        </a>
+        <p style="display: block">Terms and Conditions applied :)</p>
+
+        <span>&copy; </span><span class="copyright-year">2021</span
+        ><span> </span><span>ChatStrive</span><span> - </span
+        ><span>All Rights Reserved.</span>
+        <div class="col-md-4 col-xl-3" style="margin-top: 20px">
+          <h5>Links</h5>
+          <ul class="nav-list" style="display: inline">
+            <li>
+              <a href="#top">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact Us</a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
