@@ -107,7 +107,7 @@
                     name="Name"
                     placeholder="Your Name"
                     autocomplete="off"
-                    onclick="LiveValidate2(Name,nError);"
+                    oninput="LiveValidate(Name)"
                   />
                   <div class="Err" id="nError"></div>
                 </td>
@@ -122,7 +122,7 @@
                     name="Username"
                     placeholder="Set your Username"
                     autocomplete="off"
-                    onclick="LiveValidate2(Username,uError);"
+                    oninput="LiveValidate(Username)"
                   />
                   <div class="Err" id="uError"></div>
                 </td>
@@ -138,7 +138,7 @@
                     name="Password"
                     placeholder="Set Password"
                     autocomplete="off"
-                    onclick="LiveValidate2(Password, pError);"
+                    oninput="LiveValidate(Password)"
                   />
                   <div class="Err" id="pError"></div>
                 </td>
@@ -154,7 +154,7 @@
                     name="cPassword"
                     placeholder="Confirm Password"
                     autocomplete="off"
-                    onclick="LiveValidate2(cPassword,cError);"
+                    oninput="LiveValidate(cPassword)"
                   />
                   <div class="Err" id="cError"></div>
                 </td>
@@ -169,7 +169,7 @@
                     name="Email"
                     placeholder="Your Email Address"
                     autocomplete="off"
-                    onclick="LiveValidate2(Email,eError);"
+                    oninput="LiveValidate(Email)"
                   />
                   <div class="Err" id="eError"></div>
                 </td>

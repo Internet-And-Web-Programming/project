@@ -1,7 +1,8 @@
-function LiveValidate2(Name, err) {
-  Name.addEventListener("input", LiveValidate(Name));
-  console.log(Name.name);
+form = document.forms[0].elements;
+for (var i = 0; i < form.length - 1; i++) {
+  form[i].addEventListener("input", LiveValidate(form[i]));
 }
+
 function Signin() {
   var email = document.Signing.Email.value;
   var password = document.Signing.Password.value;
@@ -63,36 +64,35 @@ function Login() {
 }
 
 function LiveValidate(Name) {
-  var name = Name.value;
+  var input = Name.value;
   var errID = Name.name[0].toLowerCase() + "Error";
 
-  var err = document.getElementById(errID);
-  console.log(err);
-  console.log(name);
-  if (name == "") {
-    err.innerHTML = "Please enter your " + Name;
+  let err = document.getElementById(errID).innerHTML;
+  disp = "";
+  if (input == "") {
+    disp = "Please enter your " + Name.name;
   }
-  if (name < 3) {
-    err.innerHTML = "Your " + Name.name + " is very Small";
+  if (input.length < 4 && input != "") {
+    disp = "Your " + Name.name + " is very Small";
   }
-  if (Name == "Email" && name.indexOf("@") == -1) {
-    err.innerHTML = "Please enter a valid " + Name;
+  if (Name == "Email" && input.indexOf("@") == -1) {
+    disp = "Please enter a valid " + Name.name;
   }
-  if (Name == "Password" && name.length < 6) {
-    err.innerHTML = "Your " + Name.name + " is very Small";
+  if (Name == "Password" && input.length < 6) {
+    disp = "Your " + Name.name + " is very Small";
   }
-  if (Name == "Password" && name.length > 20) {
-    err.innerHTML = "Your " + Name.name + " is very Large";
+  if (Name == "Password" && input.length > 20) {
+    disp = "Your " + Name.name + " is very Large";
   }
-  if (Name == "Password" && name.indexOf(" ") != -1) {
-    err.innerHTML = "Your " + Name.name + " is not valid";
+  if (Name == "Password") {
+    disp = "Your " + Name.name + " is not valid";
   }
   if (
     Name == "cPassword" &&
-    name != document.getElementById("Password").value
+    input != document.getElementById("Password").value
   ) {
-    err.innerHTML = "Your " + Name.name + " does not match";
-  } else {
-    err.innerHTML = "";
+    disp = "Your " + Name.name + " does not match";
   }
+  err = disp;
+  document.getElementById(errID).innerHTML = err;
 }

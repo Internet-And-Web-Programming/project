@@ -64,7 +64,8 @@ header {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 550px;
+  min-width: 75%;
+  max-width: fit-content;
   transform: translateX(-50%) translateY(-50%);
   border-radius: 5.74% / 5.74%; //Horizontal radius vertical radius.
   .ThemeBtn {
@@ -85,7 +86,6 @@ header {
     position: relative;
     padding-top: 80px;
     text-align: center;
-
     font-size: 36px;
   }
   table {
@@ -149,6 +149,17 @@ header {
           font-weight: 900;
           // box-shadow: 2px 2px 5px black;
         }
+      }
+      .Err {
+        display: inline-block;
+        position: absolute;
+        padding-left: 10px;
+        transform: translate(0%, 105%);
+        left: 550px;
+        pointer-events: none;
+        color: red;
+        font-size: 10px;
+        font-weight: bold;
       }
     }
   }
