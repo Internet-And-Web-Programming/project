@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script defer src="/JS/Validation.js"></script>
+    <!-- <script defer src="/JS/ThemeChange.js"></script> -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -86,7 +88,13 @@
       <a href="#swap" class="ThemeBtn">
         <img src="../Images/light_dark.svg" alt="theme" height="40px" />
       </a>
-      <form action="">
+      <form
+        action="/"
+        method="GET"
+        onsubmit="return Signin()"
+        name="Signing"
+        id="Form"
+      >
         <div class="Heading">Sign In</div>
         <center>
           <table cellspacing="10px">
@@ -96,11 +104,10 @@
                 <td>
                   <input
                     type="text"
-                    name="Username"
-                    id="username"
+                    name="Name"
+                    id="Name"
                     placeholder="Your Name"
                     autocomplete="off"
-                    required
                   />
                 </td>
               </div>
@@ -115,7 +122,6 @@
                     id="username"
                     placeholder="Set your Username"
                     autocomplete="off"
-                    required
                   />
                 </td>
               </div>
@@ -128,10 +134,8 @@
                   <input
                     type="password"
                     name="Password"
-                    id="Password"
                     placeholder="Set Password"
                     autocomplete="off"
-                    required
                   />
                 </td>
               </div>
@@ -143,16 +147,13 @@
                 <td>
                   <input
                     type="password"
-                    name="Password"
-                    id="Password"
+                    name="cPassword"
                     placeholder="Confirm Password"
                     autocomplete="off"
-                    required
                   />
                 </td>
               </div>
             </tr>
-
             <tr>
               <div class="content">
                 <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
@@ -160,10 +161,8 @@
                   <input
                     type="Email"
                     name="Email"
-                    id="Email"
                     placeholder="Your Email Address"
                     autocomplete="off"
-                    required
                   />
                 </td>
               </div>
@@ -181,6 +180,8 @@
         <div class="bottomText">
           Already have an account? Log in
           <a href="NewLogin.html">here</a>
+          <br />
+          <div id="error"></div>
         </div>
       </center>
     </div>
