@@ -6,7 +6,7 @@ function Signin() {
   var name = document.Signing.Name.value;
   var Username = document.Signing.Username.value;
   var cpassword = document.Signing.cPassword.value;
-  result = true;
+  result = false;
   error.innerHTML = "";
   if (email == "") {
     error.innerHTML = error.innerHTML + "<br>Please enter your email";
@@ -35,6 +35,27 @@ function Signin() {
     error.innerHTML =
       error.innerHTML + "<br>Password and confirm password does not match";
     result = false;
+  } else {
+    result = true;
+  }
+  return result;
+}
+
+function Login() {
+  result = false;
+  Form1 = document.getElementById("Login");
+  UserName = Form1.Username.value;
+  Password = Form1.Password.value;
+  error = document.getElementById("error");
+  error.innerHTML = "";
+  if (UserName == "") {
+    error.innerHTML = error.innerHTML + "<br>Please enter your Username";
+  }
+  if (Password == "") {
+    error.innerHTML = error.innerHTML + "<br>Please enter your password";
+  }
+  if (UserName != "" && Password != "") {
+    result = true;
   }
   return result;
 }
