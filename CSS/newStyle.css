@@ -87,7 +87,10 @@ header ul li a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 550px;
+  min-width: 75%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
   border-radius: 5.74% / 5.74%;
@@ -191,6 +194,19 @@ header ul li a:hover {
   padding-left: 21px;
   padding-right: 21px;
   font-weight: 900;
+}
+
+.Main table td .Err {
+  display: inline-block;
+  position: absolute;
+  padding-left: 10px;
+  -webkit-transform: translate(0%, 105%);
+          transform: translate(0%, 105%);
+  left: 550px;
+  pointer-events: none;
+  color: red;
+  font-size: 10px;
+  font-weight: bold;
 }
 
 .Main .bottomText {

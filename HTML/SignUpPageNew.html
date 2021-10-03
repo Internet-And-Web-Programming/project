@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script defer src="/JS/Validation.js"></script>
+    <script defer src="/JS/ThemeChange.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -86,7 +88,13 @@
       <a href="#swap" class="ThemeBtn">
         <img src="../Images/light_dark.svg" alt="theme" height="40px" />
       </a>
-      <form action="">
+      <form
+        action="/HTML/NewLogin.html"
+        method="GET"
+        onsubmit="return Signin()"
+        name="Signing"
+        id="Form"
+      >
         <div class="Heading">Sign In</div>
         <center>
           <table cellspacing="10px">
@@ -96,12 +104,12 @@
                 <td>
                   <input
                     type="text"
-                    name="Username"
-                    id="username"
+                    name="Name"
                     placeholder="Your Name"
                     autocomplete="off"
-                    required
+                    oninput="LiveValidate(Name)"
                   />
+                  <div class="Err" id="nError"></div>
                 </td>
               </div>
             </tr>
@@ -112,11 +120,11 @@
                   <input
                     type="text"
                     name="Username"
-                    id="username"
                     placeholder="Set your Username"
                     autocomplete="off"
-                    required
+                    oninput="LiveValidate(Username)"
                   />
+                  <div class="Err" id="uError"></div>
                 </td>
               </div>
             </tr>
@@ -128,11 +136,11 @@
                   <input
                     type="password"
                     name="Password"
-                    id="Password"
                     placeholder="Set Password"
                     autocomplete="off"
-                    required
+                    oninput="LiveValidate(Password)"
                   />
+                  <div class="Err" id="pError"></div>
                 </td>
               </div>
             </tr>
@@ -143,16 +151,15 @@
                 <td>
                   <input
                     type="password"
-                    name="Password"
-                    id="Password"
+                    name="cPassword"
                     placeholder="Confirm Password"
                     autocomplete="off"
-                    required
+                    oninput="LiveValidate(cPassword)"
                   />
+                  <div class="Err" id="cError"></div>
                 </td>
               </div>
             </tr>
-
             <tr>
               <div class="content">
                 <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
@@ -160,11 +167,11 @@
                   <input
                     type="Email"
                     name="Email"
-                    id="Email"
                     placeholder="Your Email Address"
                     autocomplete="off"
-                    required
+                    oninput="LiveValidate(Email)"
                   />
+                  <div class="Err" id="eError"></div>
                 </td>
               </div>
             </tr>
@@ -181,6 +188,8 @@
         <div class="bottomText">
           Already have an account? Log in
           <a href="NewLogin.html">here</a>
+          <br />
+          <div id="error"></div>
         </div>
       </center>
     </div>
