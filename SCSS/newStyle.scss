@@ -2,14 +2,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import "./Defaults.scss"; //body and background...
 $i: "light";
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background: map-get($Main, $i);
+}
+
 body {
   background: map-get($Body, $i);
   font-family: map-get(map-get($Text-Font, $i), "fontFace");
   color: map-get(map-get($Text-Font, $i), "fontColor");
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   height: 100vh;
-  overflow: hidden;
 }
+
 .topRight {
   position: absolute;
   z-index: -1;
@@ -63,17 +73,17 @@ header {
   background: map-get($Main, $i);
   position: absolute;
   left: 50%;
-  top: 50%;
-  min-width: 75%;
-  max-width: fit-content;
+  top: 470px;
+  min-width: 700px;
+
   transform: translateX(-50%) translateY(-50%);
-  border-radius: 5.74% / 5.74%; //Horizontal radius vertical radius.
+  border-radius: 50px; //Horizontal radius vertical radius.
   .ThemeBtn {
-    position: relative;
+    position: absolute;
     border: 2px solid rgba(0, 0, 0, 0);
     border-radius: 50%;
-    left: 90%;
-    transform: translateX(-50%);
+
+    right: 15px;
     top: 15px;
     transition: all 0.5s ease;
     transform: box-shadow 0px 0px 0px rgb(0, 0, 0);
@@ -84,13 +94,13 @@ header {
   }
   .Heading {
     position: relative;
-    padding-top: 80px;
+    padding-top: 50px;
     text-align: center;
     font-size: 36px;
   }
   table {
-    padding-top: 8.1%;
-    padding-bottom: 4.3%;
+    padding-top: 30px;
+    padding-bottom: 30px;
 
     text-align: center;
     td {
@@ -164,7 +174,7 @@ header {
     }
   }
   .bottomText {
-    padding-bottom: 19.4%;
+    padding-bottom: 100px;
     padding-left: 100px;
     padding-right: 100px;
     font-weight: bold;
