@@ -99,8 +99,16 @@ body {
           overflow-y: scroll;
           position: relative;
           height: 100%;
-          .Card {
-            border-bottom: 1px solid black;
+          transition: all ease 0.3s;
+          .cardBtn {
+            border: none;
+            background-color: rgb(163, 181, 182);
+            .Card {
+              border-bottom: 1px solid black;
+            }
+            :hover {
+              background-color: rgb(182, 182, 182);
+            }
           }
         }
       }
