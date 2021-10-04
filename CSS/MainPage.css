@@ -153,10 +153,21 @@ body section#main > article section main .Connections {
   overflow-y: scroll;
   position: relative;
   height: 100%;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
-body section#main > article section main .Connections .Card {
+body section#main > article section main .Connections .cardBtn {
+  border: none;
+  background-color: #a3b5b6;
+}
+
+body section#main > article section main .Connections .cardBtn .Card {
   border-bottom: 1px solid black;
+}
+
+body section#main > article section main .Connections .cardBtn :hover {
+  background-color: #b6b6b6;
 }
 
 body section#main > aside {
