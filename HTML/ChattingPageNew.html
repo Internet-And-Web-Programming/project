@@ -45,8 +45,8 @@
                         aria-hidden="true"
                         id="SearchLogo"
                       >
-                        <input type="text" name="search" placeholder="Search" />
-                      </i>
+                        
+                      </i><input type="text" name="search" placeholder="Search" />
                     </form>
                   </div>
                 </td>
@@ -55,22 +55,22 @@
           </header>
           <main>
             <div class="Connections">
-              <table>
-                <div class="Card" id="SampleUserName1">
-                  <tr>
-                    <td>
-                      <div class="profilePic">
-                        <img src="/Images/corner.png" alt="" height="40px" />
-                      </div>
-                    </td>
-                    <td>
-                      <div class="Username">
-                        <p>Sample Jacob</p>
-                      </div>
-                    </td>
-                  </tr>
+              <div class="Card" id="SampleUserName1">
+                <div class="profilePic">
+                  <img src="/Images/corner.png" alt="" height="40px" />
                 </div>
-              </table>
+                <div class="Username">
+                  <p>Harry</p>
+                </div>
+              </div>
+              <div class="Card" id="SampleUserName2">
+                <div class="profilePic">
+                  <img src="/Images/corner.png" alt="" height="40px" />
+                </div>
+                <div class="Username">
+                  <p>Himanshu</p>
+                </div>
+              </div>
             </div>
           </main>
         </section>
@@ -78,20 +78,14 @@
       <aside>
         <section>
           <header>
-            <table>
-                <tr>
-                  <td>
-                    <div class="profilePic">
-                      <img src="/Images/corner.png" alt="" height="40px" />
-                    </div>
-                  </td>
-                  <td>
-                    <div class="ActiveUsername">
-                      <p>Sample Jacob</p>
-                    </div>
-                  </td>
-                </tr>
-            </table>
+            <div class="Card">
+              <div class="profilePic">
+                <img src="/Images/corner.png" alt="" height="40px" />
+              </div>
+              <div class="Username" id ="ActiveUser">
+                <p>Jack</p>
+              </div>
+            </div>
           </header>
           <main>
             <div class="messageWindow"></div>

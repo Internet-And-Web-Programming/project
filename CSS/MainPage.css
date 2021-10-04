@@ -31,145 +31,230 @@
   outline: 1px solid slategrey;
 }
 
+:root {
+  height: 100%;
+}
+
+:root html {
+  height: 100%;
+}
+
+.Card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
 body {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  background-color: #000124;
-  height: 100vh;
-  width: 100vw;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body section#main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
   font-family: "Roboto";
-  margin: 15px;
+  margin: 0 auto;
+  width: 100%;
   border-radius: 5px;
+  height: 100%;
 }
 
 body section#main > article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   float: left;
-  padding: 10px;
   width: 37%;
-  background-color: #37384a !important;
+  min-width: 350px;
+  min-height: 500px;
+  background-color: #e5e5e5 !important;
   border: 2px solid;
+  border-right: 0px;
   border-radius: 5px 0px 0px 5px;
 }
 
-body section#main > article section header {
-  top: 0%;
-  padding: 2px;
+body section#main > article section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
+}
+
+body section#main > article section header {
+  padding: 10px;
   border-bottom: 2px solid black;
 }
 
 body section#main > article section header .searchUser {
+  width: 100%;
   padding-top: 20px;
   font-size: 24px;
-  margin-bottom: 3px;
 }
 
-body section#main > article section header .searchUser input {
-  background: #000124 !important;
+body section#main > article section header .searchUser form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body section#main > article section header .searchUser form input {
+  background: #ffffff !important;
   font-size: 24px;
   border: none;
   border-radius: 5px;
   padding: 5px;
-  margin-left: 10px;
-  width: 85%;
+  margin: 0px 20px;
+  width: 100%;
+  color: black;
 }
 
 body section#main > article section main {
-  padding: 10px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 100%;
 }
 
 body section#main > article section main .Connections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  min-height: 78vh;
   overflow-y: scroll;
   position: relative;
   height: 100%;
 }
 
+body section#main > article section main .Connections .Card {
+  border-bottom: 1px solid black;
+}
+
 body section#main > aside {
-  float: left;
-  width: 59%;
-  background-color: #37384a !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+body section#main > aside section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  background-color: #e5e5e5 !important;
   position: relative;
-  min-height: 95vh;
-  border: 2px solid;
   border-radius: 0px 5px 5px 0px;
-  right: 0px;
+  position: relative;
+  height: 100%;
 }
 
 body section#main > aside section header {
-  padding: 10px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.527);
-}
-
-body section#main > aside section header .ActiveUserName {
-  display: inline-block;
-  font-size: 2em;
-  font-weight: 900;
+  border: 2px solid black;
 }
 
 body section#main > aside section main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   position: relative;
+  height: 100%;
   width: 100%;
 }
 
 body section#main > aside section main .messageWindow {
+  overflow-y: scroll;
+  position: relative;
   width: 100%;
-  height: 84vh;
-  background-image: linear-gradient(135deg, #37384a, #000124);
+  height: 100%;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  background-image: linear-gradient(135deg, #e5e5e5, #ffffff);
 }
 
-body section#main > aside section footer {
+body section#main > aside section footer .messageInput form {
   padding: 5px;
+  border: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-body section#main > aside section footer input {
-  background-color: #000124 !important;
-  border: none;
-  font-size: 1.5em;
-  width: 89%;
+body section#main > aside section footer .messageInput form input {
+  padding: 5px;
+  width: 100%;
+  margin: auto 10px;
+  background-color: #ffffff !important;
+  border: 1px solid black;
 }
 
-body section#main > aside section footer button {
-  padding-left: 13px;
+body section#main > aside section footer .messageInput form button {
+  padding: 0px 13px;
   font-size: 1.5em;
-  background-color: #37384a;
+  background-color: #e5e5e5;
   border: none;
 }
 
 body .profilePic {
-  display: inline-block;
   padding: 2px;
-  border-radius: 50%;
+  border-radius: 50px;
   border: 1px solid black;
-  background-color: #000124;
+  background-color: #ffffff;
   width: 40px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 body .UserName {
-  display: inline-block;
+  margin-left: 10px;
   font-size: 2em;
   font-weight: 900;
-}
-
-body .UserName ::after {
-  display: block;
-  position: absolute;
-  content: "";
-  height: 0px;
-  width: 95%;
-  margin-top: 12px;
-  left: 50%;
-  border-top: 1px solid rgba(0, 0, 0, 0.404);
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 body table {
@@ -178,6 +263,8 @@ body table {
 
 input {
   outline: none;
-  color: white;
+  color: black;
+  padding: 5px;
+  font-size: 1.5em;
 }
 /*# sourceMappingURL=MainPage.css.map */

@@ -1,8 +1,8 @@
 @import "Defaults.scss";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
-$i: "dark";
-$j: "light";
+$i: "light";
+$j: "dark";
 * {
   padding: 0px;
   margin: 0px;
@@ -21,88 +21,119 @@ $j: "light";
   background-color: darkgrey;
   outline: 1px solid slategrey;
 }
-
+:root {
+  height: 100%;
+  html {
+    height: 100%;
+  }
+}
+.Card {
+  display: flex;
+  pointer-events: none;
+  height: fit-content;
+  align-items: center;
+  padding: 10px;
+}
 body {
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: map-get($Body, $i);
-  // color: map-get(map-get($Text-Font, $i), "fontColor");
-  height: 100vh;
-  width: 100vw;
+  padding: 15px;
+  display: flex;
   section#main {
+    display: flex;
+    position: relative;
     color: map-get(map-get($Text-Font, $i), "FontColor");
     font-family: map-get(map-get($Text-Font, $i), "fontFace");
-    margin: 15px;
+    margin: 0 auto;
+    width: 100%;
     border-radius: 5px;
+    height: 100%;
   }
   section#main > article {
     // This is going to be the username panel
+    display: flex;
     position: relative;
+    flex: 1;
     float: left;
-    padding: 10px;
     width: 37%;
+    min-width: 350px;
+    min-height: 500px;
     background-color: map-get($Main, $i) !important;
-    border: 2px solid map-get(map-get($Text-Font, $i), "FontColor");
+    border: 2px solid map-get(map-get($Text-Font, $i), "FontColor"); // Need to remove right border
+    border-right: 0px;
     border-radius: 5px 0px 0px 5px;
     section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
       header {
-        top: 0%;
-        padding: 2px;
-        width: 100%;
+        padding: 10px;
+        border-bottom: 2px solid black;
         .searchUser {
+          width: 100%;
           padding-top: 20px;
           font-size: 24px;
-          input {
-            background: map-get($Body, $i) !important;
-            font-size: 24px;
-            border: none;
-            border-radius: 5px;
-            padding: 5px;
-            margin-left: 10px;
-            width: 85%;
+          form {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            input {
+              background: map-get($Body, $i) !important;
+              font-size: 24px;
+              border: none;
+              border-radius: 5px;
+              padding: 5px;
+              margin: 0px 20px;
+              width: 100%;
+              color: black;
+            }
           }
-          margin-bottom: 3px;
         }
-        border-bottom: 2px solid black;
       }
       main {
-        padding: 10px;
-        height: max-content;
+        height: 100%;
         .Connections {
+          display: flex;
+          flex-direction: column;
           width: 100%;
-          min-height: 78vh;
           overflow-y: scroll;
           position: relative;
           height: 100%;
+          .Card {
+            border-bottom: 1px solid black;
+          }
         }
       }
     }
   }
   section#main > aside {
-    float: left;
-    width: 59%;
-    background-color: map-get($Main, $i) !important;
-    position: relative;
-    min-height: 95vh;
-    border: 2px solid map-get(map-get($Text-Font, $i), "FontColor");
-    border-radius: 0px 5px 5px 0px;
-    right: 0px;
+    display: flex;
+    flex: 2;
     section {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: map-get($Main, $i) !important;
+      position: relative;
+      border-radius: 0px 5px 5px 0px;
+      position: relative;
+      height: 100%;
       header {
-        padding: 10px;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.527);
-        .ActiveUserName {
-          display: inline-block;
-          font-size: 2em;
-          font-weight: 900;
-        }
+        border: 2px solid black;
       }
       main {
+        display: flex;
+        flex-grow: 1;
         position: relative;
+        height: 100%;
         width: 100%;
         .messageWindow {
+          overflow-y: scroll;
+          position: relative;
           width: 100%;
-          height: 84vh;
+          height: 100%;
+          border-left: 2px solid black;
+          border-right: 2px solid black;
           background-image: linear-gradient(
             135deg,
             map-get($Main, $i),
@@ -110,16 +141,21 @@ body {
           );
         }
       }
-      footer {
+      footer .messageInput form {
         padding: 5px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
         input {
+          padding: 5px;
+          width: 100%;
+          margin: auto 10px;
           background-color: map-get($Body, $i) !important;
-          border: none;
-          font-size: 1.5em;
-          width: 89%;
+          border: 1px solid black;
         }
         button {
-          padding-left: 13px;
+          padding: 0px 13px;
           font-size: 1.5em;
           background-color: map-get($Main, $i);
           border: none;
@@ -127,29 +163,19 @@ body {
       }
     }
   }
+
   .profilePic {
-    display: inline-block;
     padding: 2px;
-    border-radius: 50%;
+    border-radius: 50px;
     border: 1px solid black;
     background-color: map-get($Body, $i);
     width: 40px;
+    height: fit-content;
   }
   .UserName {
-    display: inline-block;
+    margin-left: 10px;
     font-size: 2em;
     font-weight: 900;
-    ::after {
-      display: block;
-      position: absolute;
-      content: "";
-      height: 0px;
-      width: 95%;
-      margin-top: 12px;
-      left: 50%;
-      border-top: 1px solid rgba(0, 0, 0, 0.404);
-      transform: translateX(-50%);
-    }
   }
   table {
     width: 100%;
@@ -157,5 +183,7 @@ body {
 }
 input {
   outline: none;
-  color: white;
+  color: black;
+  padding: 5px;
+  font-size: 1.5em;
 }
